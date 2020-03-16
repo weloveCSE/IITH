@@ -34,6 +34,7 @@ public:
 
 
 
+void setRootNode();
 bool checkBlackToken();
 bool _flag=true;
 void changeTokenSeen(int);
@@ -580,4 +581,11 @@ bool checkBlackToken()
 {
 	if(strcmp(P[0]->tokenColor,"black")==0) return true;
 	return false;
+}
+void setRootNode()
+{
+
+		strcpy(P[0]->color,"blue");
+         P[0]->no_of_children=0;
+          P[0]->hasToken=true;
 }

@@ -134,6 +134,8 @@ public:
 
         if(areChildrenTerminated(0)){
 
+          setRootNode();
+
           terminationDetected();
           exit(0);
         }
@@ -196,7 +198,7 @@ public:
             {
                 strcpy(color,"blue");
                 strcpy(tokenColor,"white");
-                hasToken=0;
+                hasToken=false;
                 no_of_children=0;
             }
             blueNeighbours(pid);
