@@ -43,6 +43,12 @@ public:
   void send(int source, int destination, char *message)
   {
 
+    if(checkBlackToken())
+    {
+      reinitiateTD();
+      exit(0);
+    }
+
     float ff = sleepTime(0.8);
     sleep(ff);
     char *tt = timeTaken();
@@ -52,11 +58,11 @@ public:
     peeraddr.sin_addr.s_addr = inet_addr("127.0.0.1"); /* Local host address here*/
     peeraddr.sin_port = htons(destination + DIFF_PORTS);
     printf("Cell %d sends %s message to Cell %d at %s\n\n", pid + 1, message, destination + 1, tt);
-    if (hasToken)
+    if (!reported && hasToken)
     {
+      hasToken=true;
       strcpy(tokenColor, "black");
-      //printf("Process %d has turned its token color to %s\n", pid + 1, tokenColor);
-
+      printf("Process %d has turned its token color to %s\n", pid + 1, tokenColor);
     }
     sendto(socket_file_discripter, (const char *)message, strlen(message), MSG_CONFIRM, (const struct sockaddr *)&peeraddr, sizeof(peeraddr));
 
@@ -105,56 +111,45 @@ public:
 
             // setAllConditionsOfSender(sender);
             char *tt = timeTaken();
-            printf("Cell %d received red message from Cell %d at %s\n\n", pid + 1, sender + 1, tt);
+            printf("Cell %d received red message from Cell %d at %s\tToken %d\n\n", pid + 1, sender + 1, tt,hasToken);
             tt = timeTaken();
             printf("Cell %d turns red at %s\n\n", pid + 1, tt);
             redNeighbours(pid);
           }
-          /*  else{
-                redNeighbours(pid);
-            }*/
+          
         }
         else
         {
-
           strcpy(tokenColor, "white");
-          redNeighbours(pid);
+          blueNeighbours(pid);
         }
       }
       else if (!strncmp(message_received, "blue", 4))
       {
-        callPrint();
 
-        if (areChildrenTerminated(0))
-        {
-            cout<<" Naveen Kumar\n";
-            strcpy(color,"blue");
-            strcpy(tokenColor,"white");
-            printf("Process %d has received tokens from its children\n\n", pid+1);
-            no_of_children=0;
-            if(pid!=0) hasToken=false;
-            if(pid==0){
-              hasToken=true;
-              printf("Terminated successfully\n");
-              _flag=false;
-              terminationDetected();
-              return;
-            }
-            
+        
+
+        strcpy(color, "blue");
+
+
+        if(areChildrenTerminated(0)){
+
+          terminationDetected();
+          exit(0);
         }
-
 
         float tq = sleepTime(lamda_blue);
         sleep(tq);
+
         int sender = ntohs(peeraddr.sin_port) - DIFF_PORTS;
 
         char *tt = timeTaken();
 
-        printf("Cell %d received blue message from Cell %d at %s\n\n", pid + 1, sender + 1, tt);
+        printf("Cell- %d received blue message from Cell %d at %s\n\n", pid + 1, sender + 1, tt);
         tt = timeTaken();
-        printf("Cell %d turns blue at %s\n\n", pid + 1, tt);
+        printf("Cell- %d turns blue at %s\n\n", pid + 1, tt);
         strcpy(color, "blue");
-       // callPrint();
+        callPrint();
 
         if (hasToken)
         {
@@ -164,12 +159,11 @@ public:
             {
               if (strcmp(tokenColor, "black") == 0)
               {
-                printf("Process %d reinitiate the Termination Detection algorithm\n\n",pid+1 );
+                std::cout << " Need to call re-initiated" << '\n';
                 process_done = 0;
                 reinitiateTD();
-                //exit(0);
+                return;
               }
-              
               terminationDetected();
               return;
             }
@@ -178,9 +172,9 @@ public:
             strcpy(token, tokenColor);
             int parent = parentNode;
             hasToken = false;
-            makeParentToken(parent);
             strcpy(tokenColor, "white"); // We don't know about the previous color of the token
-            strcpy(color, "blue");
+            
+            makeParentToken(parent);
             //Directly send token to parentNode
             struct sockaddr_in peeraddr;                       /*Now socket address to the peer to whome the process want to send the message*/
             peeraddr.sin_family = AF_INET;                     /*We use IPV4 protocol*/
@@ -198,6 +192,13 @@ public:
           else
           {
             //printf("Process %d has token but no. of children are %d\n",pid+1,no_of_children );
+            if(areChildrenTerminated(pid))
+            {
+                strcpy(color,"blue");
+                strcpy(tokenColor,"white");
+                hasToken=0;
+                no_of_children=0;
+            }
             blueNeighbours(pid);
           }
 
@@ -212,15 +213,13 @@ public:
       }
       else if (!strncmp(message_received, "black", 5))
       {
-        //  std::cout << " Kammari Naveen kumar came to token task " << '\n';
-        //std::cout << " Toke message "<<message_received<<" came to "<<pid+1 << '\n';
-       // printf("Token--Process %d has %d no.of children before toen received\n", pid + 1, no_of_children);
+        hasToken=true;
         if (pid == 0)
         {
-          cout << " Process %d initiates Termination Detection algorithm"<<pid+1<<"\n\n";
+          cout << " Restart the process and exit\n";
           process_done = 0;
           reinitiateTD();
-          return;
+          exit(0);
         }
 
         strcpy(tokenColor, "black");
@@ -228,13 +227,16 @@ public:
         int sender = ntohs(peeraddr.sin_port) - DIFF_PORTS;
         // changeTokenSeen(sender);
         char *tt = timeTaken();
-        printf("Tokent--Cell %d received %s token from Cell %d at %s\n", pid + 1, message_received, sender + 1, tt);
+        printf("TOken Cell %d received %s token from Cell %d at %s\n", pid + 1, message_received, sender + 1, tt);
 
-        if (hasToken == false) hasToken = true; //Because we have received the token from one of its child
-        if (no_of_children > 0) no_of_children -= 1;
-        
+        if (hasToken == false)
+          hasToken = true; //Because we have received the token from one of its child
+        std::cout << pid+1<< " Before child "<<no_of_children  << '\n';
+        if (no_of_children > 0)
+          no_of_children -= 1;
+        std::cout <<pid+1<< " Affore child "<<no_of_children  << '\n';
 
-        if (no_of_children == 0)
+        if (pid!=0&&no_of_children == 0 )
         {
           char token[100];
           strcpy(token, tokenColor);
@@ -242,47 +244,51 @@ public:
           int parent = parentNode;
           hasToken = false;
           tokenSeen = false;
-          makeParentToken(parent);
 
           strcpy(tokenColor, "white"); // We don't know about the previous color of the token
-
+           makeParentToken(parent);
           //Directly send token to parentNode
           struct sockaddr_in peeraddr;                       /*Now socket address to the peer to whome the process want to send the message*/
           peeraddr.sin_family = AF_INET;                     /*We use IPV4 protocol*/
           peeraddr.sin_addr.s_addr = inet_addr("127.0.0.1"); /* Local host address here*/
           peeraddr.sin_port = htons(parent + DIFF_PORTS);
           char *tt = timeTaken();
-          printf("Token--Cell %d sends %s token  to Cell %d at %s\n\n", pid + 1, token, parent + 1, tt);
+          printf("Token-- Cell %d sends %s token  to Cell %d at %s\n\n", pid + 1, token, parent + 1, tt);
           sendto(socket_file_discripter, (const char *)token, strlen(token), MSG_CONFIRM, (const struct sockaddr *)&peeraddr, sizeof(peeraddr));
           //while(tokenSeen==false);
         }
         else
         {
+            blueNeighbours(pid);
         }
 
         //  blueNeighbours(pid);
       }
       else if (!strncmp(message_received, "white", 5))
       {
-        if (pid == 0 && no_of_children == 0&&(strcmp(tokenColor,"white")==0))
+        hasToken=true;
+        if (pid == 0 && no_of_children == 0)
         {
-          
-          terminationDetected();
-          return;
+          cout << " termination_detected the process and exit - white\n";
+          process_done = 0;
+          //reinitiateTD();
+          exit(0);
         }
 
         int sender = ntohs(peeraddr.sin_port) - DIFF_PORTS;
         changeTokenSeen(sender);
         char *tt = timeTaken();
-        printf("Token--Cell %d received %s token from Cell %d at %s\n", pid + 1, message_received, sender + 1, tt);
+        printf("TOken Cell %d received %s token from Cell %d at %s\n", pid + 1, message_received, sender + 1, tt);
 
-        if (hasToken == false) hasToken = true; //Because we have received the token from one of its child
-        
-        if (no_of_children > 0) no_of_children -= 1;
-
+        if (hasToken == false)
+          hasToken = true; //Because we have received the token from one of its child
+        std::cout << pid+1<< " Before child "<<no_of_children  << '\n';
+        if (no_of_children > 0)
+          no_of_children -= 1;
+        std::cout << pid+1<< " aFTER child "<<no_of_children  << '\n';
         //if(strcmp(tokenColor,"black")==0)
 
-        if (no_of_children == 0)
+        if (pid!=0&&no_of_children == 0)
         {
           char token[100];
           strcpy(token, tokenColor);
@@ -291,9 +297,8 @@ public:
 
           hasToken = false;
           tokenSeen = false;
-          makeParentToken(parent);
           strcpy(tokenColor, "white"); // We don't know about the previous color of the token
-
+          makeParentToken(parent);
           //Directly send token to parentNode
           struct sockaddr_in peeraddr;                       /*Now socket address to the peer to whome the process want to send the message*/
           peeraddr.sin_family = AF_INET;                     /*We use IPV4 protocol*/

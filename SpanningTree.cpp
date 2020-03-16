@@ -32,6 +32,9 @@ public:
 	}
 };
 
+
+
+bool checkBlackToken();
 bool _flag=true;
 void changeTokenSeen(int);
 bool allBlue();
@@ -563,6 +566,7 @@ bool areChildrenTerminated(int s)
 	return true;
 }
 bool terminationDetected(){
+	sleep(10);
 	callPrint();
 	exit(0);
 	return true;
@@ -571,4 +575,9 @@ bool terminationDetected(){
 void makeParentToken(int s)
 {
 	P[s]->hasToken=true;
+}
+bool checkBlackToken()
+{
+	if(strcmp(P[0]->tokenColor,"black")==0) return true;
+	return false;
 }
