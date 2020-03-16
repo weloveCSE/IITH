@@ -223,9 +223,7 @@ int main()
 	//sleep(3);
 
 	std::cout << '\n';
-	for (int i = 0; i < n; i++)
-		cout << P[i]->pid + 1 << "\t" << P[i]->color << "\t" << P[i]->no_of_children << "\t" << P[i]->tokenColor << "\t" << P[i]->hasToken << endl;
-	std::cout << '\n';
+	
 	chooseRandomRedProcesses();
 
 	std::cout << '\n';
@@ -308,10 +306,6 @@ void chooseRandomBlueProcesses()
 	float t = sleepTime(lamda_blue);
 	sleep(2 * t);
 	std::vector<int> v = findRandomness(Ib, n);
-
-	for (int i = 0; i < v.size(); i++)
-		std::cout << v[i] << '\t';
-	cout << endl;
 
 	localclock local_clock;
 	struct tm *time_information; /* Structure containing a calendar date and time broken down into its components*/
@@ -495,7 +489,7 @@ void setAllConditionsOfSender(int s)
 }
 void reinitiateTD()
 {
-
+	*number_of_messages=0;
 	for (int i = 0; i < n; i++)
 	{
 		P[i]->reset();
@@ -531,9 +525,9 @@ bool checkTD()
 
 void callPrint()
 {
-	printf("Pid\tsocket id\tcolor\tisLeaf\thasToken\ttokenColor\tNo_of children\tParent Node\n");
+	printf("Pid\tcolor\tisLeaf\thasToken\ttokenColor\tNo_of children\tParent Node\n");
 	for (int i = 0; i < n; i++)
-		cout << P[i]->pid + 1 << "\t" << P[i]->socket_file_discripter << "\t\t" << P[i]->color << "\t" << P[i]->isLeaf << "\t" << P[i]->hasToken << "\t\t" << P[i]->tokenColor << "\t\t" << P[i]->no_of_children << "\t\t" << P[i]->parentNode + 1 << "\t" << endl;
+		cout << P[i]->pid + 1 << "\t"<< P[i]->color << "\t" << P[i]->isLeaf << "\t" << P[i]->hasToken << "\t\t" << P[i]->tokenColor << "\t\t" << P[i]->no_of_children << "\t\t" << P[i]->parentNode + 1 << "\t" << endl;
 }
 
 void setSenderTokens(int s)
@@ -567,7 +561,13 @@ bool areChildrenTerminated(int s)
 	return true;
 }
 bool terminationDetected(){
-	sleep(10);
+	sleep(15);
+
+	 end_time=clock();/*End clock time */
+	 double total=(end_time-start_time)/double(CLOCKS_PER_SEC);
+	 //sleep(5);
+	std::cout << "\n Time taken by * Spanning-Tree Termination Detection * Algorithm is: " <<total<<"\n";
+	printf("%d is number of messages sent to detect Termination\n\n",*number_of_messages );
 	callPrint();
 	exit(0);
 	return true;

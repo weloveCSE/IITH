@@ -1,0 +1,1303 @@
+Socket Created Successfully for process 1 
+Socket Created Successfully for process 2 
+Socket Created Successfully for process 3 
+Socket Created Successfully for process 4 
+Socket Created Successfully for process 9 
+Socket Created Successfully for process 8 
+Socket Created Successfully for process 5 
+Socket Created Successfully for process 7 
+Socket Created Successfully for process 10 
+Socket Created Successfully for process 6 
+
+1	white	3	white	0
+2	white	2	white	0
+3	white	1	white	0
+4	white	1	white	0
+5	white	1	white	0
+6	white	1	white	0
+7	white	0	white	1
+8	white	0	white	1
+9	white	0	white	1
+10	white	0	white	1
+
+Cell 2 turns red at 18:22:38
+
+Cell 5 turns red at 18:22:38
+
+Cell 2 sends red  message to Cell 8 at 18:22:38
+
+Cell 2 sends red  message to Cell 1 at 18:22:39
+
+Cell 8 received red message from Cell 2 at 18:22:39	Token 1
+
+Cell 8 turns red at 18:22:39
+
+Cell 5 sends red  message to Cell 1 at 18:22:39
+
+Cell 1 received red message from Cell 2 at 18:22:39	Token 0
+
+Cell 1 turns red at 18:22:39
+
+Cell 8 sends red  message to Cell 10 at 18:22:39
+
+Cell 1 sends red  message to Cell 2 at 18:22:39
+
+Cell 10 received red message from Cell 8 at 18:22:39	Token 1
+
+Cell 10 turns red at 18:22:39
+
+3	4	0	7	
+Cell 4 turns blue at 18:22:39
+
+Cell 5 turns blue at 18:22:39
+
+Cell 1 turns blue at 18:22:39
+
+Cell 8 turns blue at 18:22:39
+
+Cell 5 sends red  message to Cell 4 at 18:22:40
+
+
+Cell 4 sends blue  message to Cell 1 at 18:22:40
+
+Cell 8 sends red  message to Cell 4 at 18:22:41
+
+Cell 10 sends red  message to Cell 8 at 18:22:41
+
+Cell 4 sends blue  message to Cell 3 at 18:22:41
+
+Cell 4 sends blue  message to Cell 5 at 18:22:41
+
+Cell 3 received blue message from Cell 4 at 18:22:41
+
+Cell 3 turns blue at 18:22:41
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		blue	0	0		white		3		0	
+2	4		red	0	0		white		2		1	
+3	5		blue	0	0		white		1		1	
+4	6		blue	0	0		white		1		1	
+5	9		blue	0	0		white		1		2	
+6	12		white	0	0		white		1		2	
+7	10		white	1	1		white		0		3	
+8	8		blue	1	1		black		0		4	
+9	7		white	1	1		white		0		5	
+10	11		red	1	1		black		0		6	
+Cell 3 sends blue  message to Cell 2 at 18:22:41
+
+Cell 3 sends blue  message to Cell 6 at 18:22:41
+
+Cell 2 received blue message from Cell 3 at 18:22:41
+
+Cell 2 turns blue at 18:22:41
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		blue	0	0		white		3		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		1		1	
+4	6		blue	0	0		white		1		1	
+Cell 6 received blue message from Cell 3 at 18:22:41
+
+5	9		blue	0	0		white		1		2	
+6	12		blue	0	0		white		1		2	
+Cell 6 turns blue at 18:22:41
+
+7	10		white	1	1		white		0Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+		13		
+8	8		blue	1	1		black		0		43			blue	0
+9	7		white	1	1		white		0		5	
+10	11		red	1	1		black			0Cell 3 sends blue  message to Cell 10 at 18:22:41
+
+0		white		3		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		1		1	
+4	6		blue	0	0		white		1		1	
+5	9		blue	0	0		white		1		2	
+6	12		blue	0	0		white		1		2	
+7	10		white	1	1		white		0		3	
+8	8		blue	1	1		black		0		4	
+9	7		white	1	1		white		0		5	
+10	11		red	1	1		black		0		6	
+		6	
+Cell 3 sends blue  message to Cell 5 at 18:22:41
+
+Cell 6 sends blue  message to Cell 5 at 18:22:41
+
+Cell 2 sends blue  message to Cell 5 at 18:22:41
+
+Cell 2 sends blue  message to Cell 6 at 18:22:41
+
+Cell 8 received red message from Cell 10 at 18:22:42	Token 1
+
+Cell 8 turns red at 18:22:42
+
+Cell 4 sends blue  message to Cell 2 at 18:22:42
+
+Cell 5 received blue message from Cell 4 at 18:22:42
+
+Cell 5 turns blue at 18:22:42
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		blue	0	0		white		3		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		1		1	
+4	6		blue	0	0		white		1		1	
+5	9		blue	0	0		white		1		2	
+6	12		blue	0	0		white		1		2	
+7	10		white	1	1		white		0		3	
+8	8		red	1	1		black		0		4	
+9	7		white	1	1		white		0		5	
+10	11		red	1	1		black		0		6	
+Cell 4 sends blue  message to Cell 6 at 18:22:42
+
+Cell 5 sends blue  message to Cell 1 at 18:22:42
+
+Cell 4 sends blue  message to Cell 7 at 18:22:42
+
+Cell 5 sends blue  message to Cell 1 at 18:22:42
+
+Cell 5 sends blue  message to Cell 4 at 18:22:42
+
+Cell 2 sends blue  message to Cell 4 at 18:22:42
+
+Cell 4 received red message from Cell 5 at 18:22:43	Token 0
+
+Cell 4 turns red at 18:22:43
+
+Cell 7 received blue message from Cell 4 at 18:22:43
+
+Cell 7 turns blue at 18:22:43
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		blue	0	0		white		3		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		1		1	
+4	6		red	0	0		white		1		1	
+5	9		blue	0	0		white		1		2	
+6	12		blue	0	0		white		1		2	
+7	10		blue	1	1		white		0		3	
+8	8		red	1	1		black		0		4	
+9	7		white	1	1		white		0		5	
+10	11		red	1	1		black		0		6	
+Cell 7 sends white token  to Cell 3 at 18:22:43
+
+Cell 3 sends blue  message to Cell 8 at 18:22:43
+
+Cell 3 received white token from Cell 7 at 18:22:43
+Cell 3 sends black token  to Cell 1 at 18:22:43
+
+Cell 2 sends blue  message to Cell 1 at 18:22:43
+
+Cell 2 sends blue  message to Cell 8 at 18:22:43
+
+Cell 2 received blue message from Cell 4 at 18:22:43
+
+Cell 2 turns blue at 18:22:43
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		blue	0	1		white		3		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		red	0	0		white		1		1	
+5	9		blue	0	0		white		1		2	
+6	12		blue	0	0		white		1		2	
+7	10		blue	1	0		white		0		3	
+8	8		red	1	1		black		0		4	
+9	7		white	1	1		white		0		5	
+10	11		red	1	1		black		0		6	
+Cell 4 sends red  message to Cell 7 at 18:22:44
+
+Cell 4 sends red  message to Cell 3 at 18:22:44
+
+Cell 3 received red message from Cell 4 at 18:22:44	Token 0
+
+Cell 3 turns red at 18:22:44
+
+Cell 5 sends blue  message to Cell 3 at 18:22:44
+
+Cell 6 sends blue  message to Cell 7 at 18:22:44
+
+Cell 3 sends red  message to Cell 10 at 18:22:45
+
+Cell 8 sends red  message to Cell 4 at 18:22:45
+
+Cell 5 sends blue  message to Cell 6 at 18:22:45
+
+Cell 6 sends blue  message to Cell 9 at 18:22:45
+
+Cell 9 received blue message from Cell 6 at 18:22:45
+
+Cell 9 turns blue at 18:22:45
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		blue	0	1		white		3		0	
+2	4		blue	0	0		white		2		1	
+3	5		red	0	0		white		0		1	
+4	6		red	0	0		white		1		1	
+5	9		blue	0	0		white		1		2	
+6	12		blue	0	0		white		1		2	
+7	10		blue	1	0		white		0		3	
+8	8		red	1	1		black		0		4	
+9	7		blue	1	1		white		0		5	
+10	11		red	1	1		black		0		6	
+Cell 9 sends white token  to Cell 5 at 18:22:45
+
+Cell 2 sends blue  message to Cell 5 at 18:22:45
+
+Cell 5 sends blue  message to Cell 3 at 18:22:46
+
+Cell 5 sends blue  message to Cell 6 at 18:22:46
+
+Cell 5 sends blue  message to Cell 10 at 18:22:46
+
+Cell 5 sends blue  message to Cell 9 at 18:22:46
+
+Cell 1 sends blue  message to Cell 2 at 18:22:46
+
+Process 1 is re-initiated
+Cell 4 received blue message from Cell 5 at 18:22:47
+
+Cell 4 turns blue at 18:22:47
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		red	0	0		white		0		1	
+4	6		blue	0	0		white		1		1	
+5	9		blue	0	1		black		1		2	
+6	12		blue	0	0		white		1		2	
+7	10		blue	1	0		white		0		3	
+8	8		red	1	1		black		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		red	1	1		black		0		6	
+Cell 8 sends red  message to Cell 9 at 18:22:47
+
+Cell 8 received blue message from Cell 3 at 18:22:47
+
+Cell 8 turns blue at 18:22:47
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		red	0	0		white		0		1	
+4	6		blue	0	0		white		1		1	
+5	9		blue	0	1		black		1		2	
+6	12		blue	0	0		white		1		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	1		black		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		red	1	1		black		0		6	
+Cell 8 sends black token  to Cell 4 at 18:22:47
+
+Cell 8 received blue message from Cell 2 at 18:22:47
+
+Cell 8 turns blue at 18:22:47
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		red	0	0		white		0		1	
+4	6		blue	0	1		white		1		1	
+5	9		blue	0	1		black		1		2	
+6	12		blue	0	0		white		1		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		red	1	1		black		0		6	
+Cell 9 received blue message from Cell 5 at 18:22:47
+
+Cell 9 turns blue at 18:22:47
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		red	0	0		white		0		1	
+4	6		blue	0	1		white		1		1	
+5	9		blue	0	1		black		1		2	
+6	12		blue	0	0		white		1		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		red	1	1		black		0		6	
+Cell 6 sends blue  message to Cell 4 at 18:22:47
+
+Cell 10 sends red  message to Cell 1 at 18:22:48
+
+Cell 10 received blue message from Cell 3 at 18:22:48
+
+Cell 10 turns blue at 18:22:48
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		red	0	0		white		0		1	
+4	6		blue	0	1		white		1		1	
+5	9		blue	0	1		black		1		2	
+6	12		blue	0	0		white		1		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	1		black		0		6	
+Cell 10 sends black token  to Cell 6 at 18:22:48
+
+Cell 4 sends blue  message to Cell 3 at 18:22:48
+
+Cell 10 sends blue  message to Cell 1 at 18:22:49
+
+Cell 10 sends blue  message to Cell 2 at 18:22:49
+
+Cell 5 sends blue  message to Cell 10 at 18:22:49
+
+Cell 6 sends blue  message to Cell 1 at 18:22:49
+
+Cell 7 sends blue  message to Cell 1 at 18:22:50
+
+Cell 7 sends blue  message to Cell 3 at 18:22:50
+
+Cell 7 sends blue  message to Cell 8 at 18:22:50
+
+Cell 3 sends red  message to Cell 6 at 18:22:50
+
+Cell 7 sends blue  message to Cell 4 at 18:22:50
+
+Cell 3 received blue message from Cell 5 at 18:22:50
+
+Cell 3 turns blue at 18:22:50
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	1		black		1		1	
+5	9		blue	0	1		black		1		2	
+6	12		blue	0	1		black		1		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 4 sends blue  message to Cell 7 at 18:22:50
+
+Cell 8 sends blue  message to Cell 4 at 18:22:50
+
+Cell 9 sends blue  message to Cell 3 at 18:22:50
+
+Cell 6 sends blue  message to Cell 2 at 18:22:50
+
+Cell 6 sends blue  message to Cell 3 at 18:22:50
+
+Cell 6 received blue message from Cell 2 at 18:22:50
+
+Cell 6 turns blue at 18:22:50
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	1		black		1		1	
+5	9		blue	0	1		black		1		2	
+6	12		blue	0	1		black		1		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 2 sends blue  message to Cell 6 at 18:22:50
+
+Cell 7 sends blue  message to Cell 5 at 18:22:51
+
+Cell 3 sends blue  message to Cell 10 at 18:22:51
+
+Cell 10 sends blue  message to Cell 5 at 18:22:51
+
+Cell 7 received blue message from Cell 6 at 18:22:51
+
+Cell 4 sends blue  message to Cell 6 at 18:22:51
+
+Cell 7 turns blue at 18:22:51
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+Cell 10 sends blue  message to Cell 8 at 18:22:51
+
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	1		black		1		1	
+5	9		blue	0	1		black		1		2	
+6	12		blue	0	0		whiteCell 3 sends blue  message to Cell 8 at 18:22:51
+
+		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 10 sends blue  message to Cell 3 at 18:22:51
+
+Cell 4 sends blue  message to Cell 1 at 18:22:51
+
+Cell 3 sends blue  message to Cell 5 at 18:22:51
+
+Cell 10 received blue message from Cell 5 at 18:22:51
+
+Cell 10 turns blue at 18:22:51
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	1		black		1		1	
+5	9		blue	0	1		black		1		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 3 sends blue  message to Cell 6 at 18:22:51
+
+Cell 8 sends blue  message to Cell 9 at 18:22:51
+
+Cell 8 sends blue  message to Cell 6 at 18:22:51
+
+Cell 8 sends blue  message to Cell 10 at 18:22:51
+
+Cell 5 sends blue  message to Cell 9 at 18:22:51
+
+Cell 8 sends blue  message to Cell 7 at 18:22:51
+
+Cell 8 received blue message from Cell 7 at 18:22:51
+
+Cell 8 turns blue at 18:22:51
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	1		black		1		1	
+5	9		blue	0	1		black		1		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 5 sends blue  message to Cell 4 at 18:22:51
+
+Cell 5 received blue message from Cell 3 at 18:22:51
+
+Cell 5 turns blue at 18:22:51
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	1		black		1		1	
+5	9		blue	0	1		black		1		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 9 sends blue  message to Cell 2 at 18:22:51
+
+Cell 5 sends blue  message to Cell 9 at 18:22:51
+
+Cell 5 sends blue  message to Cell 3 at 18:22:51
+
+Cell 5 sends blue  message to Cell 4 at 18:22:51
+
+Cell 5 sends blue  message to Cell 6 at 18:22:51
+
+Cell 7 sends blue  message to Cell 1 at 18:22:52
+
+Cell 10 sends blue  message to Cell 3 at 18:22:52
+
+Cell 8 sends blue  message to Cell 7 at 18:22:52
+
+Cell 9 sends blue  message to Cell 8 at 18:22:52
+
+Cell 9 sends blue  message to Cell 1 at 18:22:52
+
+Cell 9 sends blue  message to Cell 4 at 18:22:52
+
+Cell 6 sends blue  message to Cell 2 at 18:22:52
+
+Cell 7 sends blue  message to Cell 4 at 18:22:53
+
+Cell 3 sends blue  message to Cell 2 at 18:22:53
+
+Cell 10 sends blue  message to Cell 2 at 18:22:53
+
+Cell 3 received blue message from Cell 5 at 18:22:53
+
+Cell 3 turns blue at 18:22:53
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+Cell 10 sends blue  message to Cell 8 at 18:22:53
+
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	1		black		1		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 3 sends blue  message to Cell 5 at 18:22:53
+
+Cell 5 received blue message from Cell 6 at 18:22:53
+
+Cell 5 turns blue at 18:22:53
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	1		black		1		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 6 sends blue  message to Cell 5 at 18:22:53
+
+Cell 7 sends blue  message to Cell 3 at 18:22:54
+
+Cell 10 sends blue  message to Cell 1 at 18:22:54
+
+Cell 8 sends blue  message to Cell 4 at 18:22:54
+
+Cell 3 sends blue  message to Cell 2 at 18:22:54
+
+Cell 10 received blue message from Cell 5 at 18:22:54
+
+Cell 10 turns blue at 18:22:54
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	1		black		1		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 8 sends blue  message to Cell 10 at 18:22:54
+
+Cell 10 sends blue  message to Cell 3 at 18:22:54
+
+Cell 9 sends blue  message to Cell 2 at 18:22:54
+
+Cell 9 sends blue  message to Cell 4 at 18:22:54
+
+Cell 5 sends blue  message to Cell 4 at 18:22:54
+
+Cell 2 sends blue  message to Cell 8 at 18:22:54
+
+Cell 6 sends blue  message to Cell 7 at 18:22:54
+
+Cell 4 sends blue  message to Cell 5 at 18:22:55
+
+Cell 4 sends blue  message to Cell 2 at 18:22:55
+
+Cell 4 received blue message from Cell 2 at 18:22:55
+
+Cell 4 turns blue at 18:22:55
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	1		black		1		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 7 sends blue  message to Cell 8 at 18:22:55
+
+Cell 4 sends blue  message to Cell 6 at 18:22:55
+
+Cell 7 sends blue  message to Cell 5 at 18:22:55
+
+Cell 7 received blue message from Cell 4 at 18:22:55
+
+Cell 7 turns blue at 18:22:55
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 3 sends blue  message to Cell 6 at 18:22:55
+
+Cell 8 sends blue  message to Cell 9 at 18:22:55
+
+Cell 9 sends blue  message to Cell 3 at 18:22:55
+
+Cell 9 sends blue  message to Cell 8 at 18:22:55
+
+Cell 9 sends blue  message to Cell 1 at 18:22:55
+
+Cell 9 received blue message from Cell 8 at 18:22:55
+
+Cell 9 turns blue at 18:22:55
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 6 sends blue  message to Cell 4 at 18:22:55
+
+Cell 4 sends blue  message to Cell 7 at 18:22:56
+
+Cell 8 received blue message from Cell 10 at 18:22:56
+
+Cell 8 turns blue at 18:22:56
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 5 sends blue  message to Cell 3 at 18:22:56
+
+Cell 5 sends blue  message to Cell 10 at 18:22:56
+
+Cell 5 sends blue  message to Cell 9 at 18:22:56
+
+Cell 9 sends blue  message to Cell 1 at 18:22:56
+
+Cell 9 sends blue  message to Cell 3 at 18:22:56
+
+Cell 2 sends blue  message to Cell 1 at 18:22:56
+
+Cell 2 received blue message from Cell 1 at 18:22:56
+
+Cell 2 turns blue at 18:22:56
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 6 sends blue  message to Cell 9 at 18:22:56
+
+Cell 2 sends blue  message to Cell 8 at 18:22:56
+
+Cell 6 sends blue  message to Cell 3 at 18:22:56
+
+Cell 4 sends blue  message to Cell 1 at 18:22:57
+
+Cell 4 sends blue  message to Cell 5 at 18:22:57
+
+Cell 10 sends blue  message to Cell 5 at 18:22:57
+
+Cell 10 sends blue  message to Cell 2 at 18:22:57
+
+Cell 8 sends blue  message to Cell 10 at 18:22:57
+
+Cell 8 sends blue  message to Cell 4 at 18:22:57
+
+Cell 7 sends blue  message to Cell 8 at 18:22:58
+
+Cell 10 sends blue  message to Cell 1 at 18:22:58
+
+Cell 8 sends blue  message to Cell 6 at 18:22:58
+
+Cell 8 sends blue  message to Cell 7 at 18:22:58
+
+Cell 5 sends blue  message to Cell 1 at 18:22:58
+
+Cell 3 sends blue  message to Cell 8 at 18:22:59
+
+Cell 7 sends blue  message to Cell 1 at 18:22:59
+
+Cell 7 sends blue  message to Cell 4 at 18:22:59
+
+Cell 7 sends blue  message to Cell 5 at 18:22:59
+
+Cell 7 sends blue  message to Cell 3 at 18:22:59
+
+Cell 8 sends blue  message to Cell 9 at 18:22:59
+
+Cell 8 received blue message from Cell 3 at 18:22:59
+
+Cell 8 turns blue at 18:22:59
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 8 sends blue  message to Cell 4 at 18:22:59
+
+Cell 9 sends blue  message to Cell 8 at 18:22:59
+
+Cell 6 sends blue  message to Cell 1 at 18:22:59
+
+Cell 4 sends blue  message to Cell 3 at 18:23:00
+
+Cell 4 sends blue  message to Cell 2 at 18:23:00
+
+Cell 7 received blue message from Cell 8 at 18:23:00
+
+Cell 7 turns blue at 18:23:00
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 7 sends blue  message to Cell 3 at 18:23:00
+
+Cell 5 sends blue  message to Cell 6 at 18:23:00
+
+Cell 5 received blue message from Cell 2 at 18:23:00
+
+Cell 5 turns blue at 18:23:00
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 9 sends blue  message to Cell 4 at 18:23:00
+
+Cell 6 received blue message from Cell 4 at 18:23:00
+
+Cell 6 turns blue at 18:23:00
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 3 sends blue  message to Cell 10 at 18:23:01
+
+Cell 3 received blue message from Cell 4 at 18:23:01
+
+Cell 3 turns blue at 18:23:01
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 4 received red message from Cell 8 at 18:23:01	Token 0
+
+Cell 4 turns red at 18:23:01
+
+Cell 10 sends blue  message to Cell 8 at 18:23:01
+
+Cell 3 sends blue  message to Cell 8 at 18:23:01
+
+Cell 10 received blue message from Cell 3 at 18:23:01
+
+Cell 10 turns blue at 18:23:01
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		red	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 7 sends blue  message to Cell 8 at 18:23:01
+
+Cell 5 sends blue  message to Cell 6 at 18:23:01
+
+Cell 8 sends blue  message to Cell 10 at 18:23:01
+
+Cell 5 sends blue  message to Cell 9 at 18:23:01
+
+Cell 8 sends blue  message to Cell 9 at 18:23:01
+
+Cell 9 received blue message from Cell 5 at 18:23:01
+
+Cell 9 turns blue at 18:23:01
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		red	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 9 sends blue  message to Cell 2 at 18:23:01
+
+Cell 2 sends blue  message to Cell 1 at 18:23:01
+
+Cell 6 sends blue  message to Cell 7 at 18:23:01
+
+Cell 3 sends blue  message to Cell 6 at 18:23:02
+
+Cell 7 sends blue  message to Cell 4 at 18:23:02
+
+Cell 5 sends blue  message to Cell 4 at 18:23:02
+
+Cell 9 sends blue  message to Cell 1 at 18:23:02
+
+Cell 2 sends blue  message to Cell 6 at 18:23:02
+
+Cell 6 sends blue  message to Cell 4 at 18:23:02
+
+Cell 3 sends blue  message to Cell 2 at 18:23:03
+
+Cell 3 sends blue  message to Cell 10 at 18:23:03
+
+Cell 3 sends blue  message to Cell 5 at 18:23:03
+
+Cell 3 received blue message from Cell 7 at 18:23:03
+
+Cell 3 turns blue at 18:23:03
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		red	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 8 sends blue  message to Cell 7 at 18:23:03
+
+Cell 2 sends blue  message to Cell 5 at 18:23:03
+
+Cell 5 sends blue  message to Cell 1 at 18:23:04
+
+Cell 8 sends blue  message to Cell 6 at 18:23:04
+
+Cell 8 received blue message from Cell 9 at 18:23:04
+
+Cell 9 sends blue  message to Cell 4 at 18:23:04
+
+Cell 8 turns blue at 18:23:04
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+Cell 2 sends blue  message to Cell 4 at 18:23:04
+
+3	5		blue	0	0		white		0		1	
+4	6		red	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 2 received blue message from Cell 10 at 18:23:04
+
+Cell 2 turns blue at 18:23:04
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		red	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 8 sends blue  message to Cell 10 at 18:23:04
+
+Cell 2 sends blue  message to Cell 1 at 18:23:04
+
+Cell 3 sends blue  message to Cell 2 at 18:23:05
+
+Cell 5 sends blue  message to Cell 10 at 18:23:05
+
+Cell 5 sends blue  message to Cell 3 at 18:23:05
+
+Cell 5 received white token from Cell 9 at 18:23:05
+Cell 5 sends white token  to Cell 2 at 18:23:05
+
+Cell 5 received blue message from Cell 2 at 18:23:05
+
+Cell 5 turns blue at 18:23:05
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	1		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		red	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 6 sends blue  message to Cell 9 at 18:23:05
+
+Cell 6 sends blue  message to Cell 1 at 18:23:05
+
+Cell 6 sends blue  message to Cell 3 at 18:23:05
+
+Cell 8 sends blue  message to Cell 7 at 18:23:05
+
+Cell 6 sends blue  message to Cell 5 at 18:23:05
+
+Cell 4 sends red  message to Cell 7 at 18:23:06
+
+Cell 10 sends blue  message to Cell 2 at 18:23:06
+
+Cell 7 sends blue  message to Cell 1 at 18:23:06
+
+Cell 7 received blue message from Cell 8 at 18:23:06
+
+Cell 7 turns blue at 18:23:06
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	1		white		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		red	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 3 sends blue  message to Cell 8 at 18:23:06
+
+Cell 9 sends blue  message to Cell 3 at 18:23:06
+
+Cell 5 sends blue  message to Cell 1 at 18:23:06
+
+Cell 2 sends blue  message to Cell 8 at 18:23:06
+
+Cell 2 sends blue  message to Cell 5 at 18:23:06
+
+Cell 6 received blue message from Cell 5 at 18:23:06
+
+Cell 6 turns blue at 18:23:06
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	1		black		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		red	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 6 sends blue  message to Cell 5 at 18:23:06
+
+Cell 9 sends blue  message to Cell 8 at 18:23:07
+
+Cell 8 sends blue  message to Cell 9 at 18:23:07
+
+Cell 2 sends blue  message to Cell 6 at 18:23:07
+
+Cell 10 sends blue  message to Cell 3 at 18:23:08
+
+Cell 10 sends blue  message to Cell 8 at 18:23:08
+
+Cell 7 sends blue  message to Cell 3 at 18:23:08
+
+Cell 9 received blue message from Cell 5 at 18:23:08
+
+Cell 9 turns blue at 18:23:08
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	1		black		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		red	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 5 sends blue  message to Cell 4 at 18:23:08
+
+Cell 9 sends blue  message to Cell 2 at 18:23:08
+
+Cell 5 sends blue  message to Cell 10 at 18:23:08
+
+Cell 8 sends blue  message to Cell 4 at 18:23:08
+
+Cell 2 sends blue  message to Cell 4 at 18:23:08
+
+Cell 10 sends blue  message to Cell 1 at 18:23:09
+
+Cell 10 sends blue  message to Cell 5 at 18:23:09
+
+Cell 10 received blue message from Cell 8 at 18:23:09
+
+Cell 10 turns blue at 18:23:09
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	1		black		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		red	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 7 sends blue  message to Cell 1 at 18:23:09
+
+Cell 7 sends blue  message to Cell 5 at 18:23:09
+
+Cell 9 sends blue  message to Cell 3 at 18:23:09
+
+Cell 9 sends blue  message to Cell 8 at 18:23:09
+
+Cell 9 sends blue  message to Cell 4 at 18:23:09
+
+Cell 9 sends blue  message to Cell 1 at 18:23:09
+
+Cell 9 received blue message from Cell 8 at 18:23:09
+
+Cell 2 received blue message from Cell 6 at 18:23:09
+
+Cell 9 turns blue at 18:23:09
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	1		black		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		red	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 2 turns blue at 18:23:09
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	1		black		2		1	
+3	5		blue	0	0		white		0		1	
+4	6		red	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 6 sends blue  message to Cell 7 at 18:23:09
+
+Cell 9 sends blue  message to Cell 8 at 18:23:09
+
+Cell 6 sends blue  message to Cell 9 at 18:23:09
+
+Cell 9 sends blue  message to Cell 1 at 18:23:09
+
+Cell 9 sends blue  message to Cell 4 at 18:23:09
+
+Cell 9 sends blue  message to Cell 3 at 18:23:09
+
+Cell 10 sends blue  message to Cell 3 at 18:23:10
+
+Cell 3 sends blue  message to Cell 5 at 18:23:10
+
+Cell 2 sends blue  message to Cell 5 at 18:23:10
+
+Cell 6 sends blue  message to Cell 4 at 18:23:10
+
+Cell 2 sends blue  message to Cell 8 at 18:23:10
+
+Cell 9 sends blue  message to Cell 2 at 18:23:10
+
+Cell 9 received blue message from Cell 5 at 18:23:10
+
+Cell 9 turns blue at 18:23:10
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		0		1	
+3	5		blue	0	0		white		0		1	
+4	6		red	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 10 sends blue  message to Cell 1 at 18:23:11
+
+Cell 10 sends blue  message to Cell 5 at 18:23:11
+
+Cell 10 sends blue  message to Cell 2 at 18:23:11
+
+Cell 8 sends blue  message to Cell 6 at 18:23:11
+
+Cell 8 received blue message from Cell 10 at 18:23:11
+
+Cell 8 turns blue at 18:23:11
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		0		1	
+3	5		blue	0	0		white		0		1	
+4	6		red	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 6 sends blue  message to Cell 2 at 18:23:11
+
+Cell 3 sends blue  message to Cell 10 at 18:23:12
+
+Cell 10 received blue message from Cell 8 at 18:23:12
+
+Cell 10 turns blue at 18:23:12
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		white	0	0		white		0		0	
+2	4		blue	0	0		white		0		1	
+3	5		blue	0	0		white		0		1	
+4	6		red	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
+Cell 10 sends blue  message to Cell 8 at 18:23:12
+
+Cell 5 sends blue  message to Cell 9 at 18:23:12
+
+Cell 8 sends blue  message to Cell 4 at 18:23:12
+
+Cell 8 sends blue  message to Cell 9 at 18:23:12
+
+Cell 8 sends blue  message to Cell 6 at 18:23:12
+
+Cell 2 sends blue  message to Cell 4 at 18:23:12
+
+Cell 6 sends blue  message to Cell 1 at 18:23:12
+
+Cell 9 sends blue  message to Cell 8 at 18:23:12
+
+Cell 4 sends red  message to Cell 3 at 18:23:13
+
+Cell 4 received black token from Cell 8 at 18:23:13
+4 Before child 0
+4 Affore child 0
+Cell 4 sends black token  to Cell 1 at 18:23:13
+
+Cell 3 sends blue  message to Cell 6 at 18:23:13
+
+Cell 6 sends blue  message to Cell 3 at 18:23:13
+
+Cell 10 sends blue  message to Cell 5 at 18:23:14
+
+Cell 8 sends blue  message to Cell 10 at 18:23:14
+
+Cell 8 sends blue  message to Cell 7 at 18:23:14
+
+Cell 2 sends blue  message to Cell 1 at 18:23:14
+
+Cell 9 sends blue  message to Cell 2 at 18:23:14
+
+Cell 5 sends blue  message to Cell 3 at 18:23:15
+
+Cell 10 sends blue  message to Cell 1 at 18:23:15
+
+Cell 10 sends blue  message to Cell 3 at 18:23:15
+
+Cell 10 sends blue  message to Cell 2 at 18:23:15
+
+Cell 2 sends blue  message to Cell 6 at 18:23:15
+
+Cell 9 sends blue  message to Cell 1 at 18:23:15
+
+Cell 9 sends blue  message to Cell 4 at 18:23:15
+
+Cell 7 sends blue  message to Cell 8 at 18:23:16
+
+Cell 7 sends blue  message to Cell 4 at 18:23:16
+
+Pid	socket id	color	isLeaf	hasToken	tokenColor	No_of children	Parent Node
+1	3		blue	0	1		white		0		0	
+2	4		blue	0	0		white		0		1	
+3	5		blue	0	0		white		0		1	
+4	6		blue	0	0		white		0		1	
+5	9		blue	0	0		white		0		2	
+6	12		blue	0	0		white		0		2	
+7	10		blue	1	0		white		0		3	
+8	8		blue	1	0		white		0		4	
+9	7		blue	1	0		white		0		5	
+10	11		blue	1	0		white		0		6	
