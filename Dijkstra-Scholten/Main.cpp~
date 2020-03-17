@@ -1,0 +1,421 @@
+#include<iostream>
+#define MAX_BUFFER 512
+#define Max 10000
+#define DIFF_PORTS 35000
+#include <arpa/inet.h>
+#include <bits/stdc++.h>
+#include <unistd.h>
+#include <string>
+#include <fstream>
+#include <fstream>
+#include <string>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <sstream>
+#include <chrono>
+#include <unistd.h>
+#include <cmath>
+#include<vector>
+#include<cmath>
+#include <algorithm>
+#include <ctime>
+
+double start_time,end_time;
+using namespace std::chrono;
+using namespace std;
+int *number_of_messages;
+int *DD;
+float sleepTime(float);
+void printPattern();
+bool checkTTD();
+bool chechParentNode(int);
+void decreaseInitiator();
+bool alreadySeen(int);
+void callToReject(int);
+bool alreadySeen(int);
+void makeProcessD(int);
+void chooseRandomRedProcesses();
+void chooseRandomBlueProcesses();
+void callDetermined();
+vector<int>findRandomness(int,int);
+void sendRedMessage(int,int);
+void sendBlueMessage(int,int);
+void redNeighbours(int);
+void blueNeighbours(int);
+char *timeTaken();
+
+
+int process_init=-1;
+//int *socket_file_discripter;
+bool delayTime=true;
+int d_sent=0;
+pthread_cond_t conditioned_thread = PTHREAD_COND_INITIALIZER; /**/
+pthread_mutex_t locker = PTHREAD_MUTEX_INITIALIZER; /**/
+int process_done = 0;
+
+
+vector<vector<int>> adjacencyMatrix;
+int Ir ,  Ib ,n;
+float Wr,Wb, lamda_red, lamda_blue, p , q ;
+
+#include "ClockClass.cpp"
+#include "Process.cpp"
+
+Process **P;
+Process *initiator_p;
+void create_process_and_socket(int pid){
+
+	if(pid<=n){
+	P[pid]=new Process(pid);
+	int status = P[pid]->socket_create();
+
+	P[pid]->process_Synchronization_Barrier();
+
+	if(status<0){
+		printf("Socket creation is failed\n");
+		return ;
+				}
+	}
+}
+
+
+vector<string> split(string str, char delimiter) {
+  vector<string> internal;
+  stringstream ss(str); // Turn the string into a stream.
+  string tok;
+
+  while(getline(ss, tok, delimiter)) {
+    internal.push_back(tok);
+  }
+
+  return internal;
+}
+
+
+int main()
+{
+
+
+					number_of_messages=(int *)malloc(sizeof(int));
+          fstream newfile;
+          string tp;
+          vector<string> sep;
+          std::vector<int> neighbours;
+
+          newfile.open("data.txt",ios::in); //open a file to perform read operation using file object
+          int i=0, l=0;
+          while(getline(newfile, tp))
+          {
+          sep= split(tp, ' ');
+
+          if(l==0){
+          n=stoi(sep[0]);Wr=stof(sep[1]);Ir=stoi(sep[2]);Wb=stof(sep[3]);Ib=stoi(sep[4]);lamda_red=stof(sep[5]);lamda_blue=stof(sep[6]);
+          p=stof(sep[7]);q=stof(sep[8]);
+            l=12;
+          }
+          else{
+             if(i<n)
+             {
+                for(int j=0;j<sep.size();j++)
+                {
+                  int ii=stoi(sep[j]);
+                //  if(initiator==-1) initiator=ii-1;
+                  neighbours.push_back(ii);
+                }
+                adjacencyMatrix.push_back(neighbours);
+                neighbours.clear();
+             }
+             i++;
+          }
+          }
+          newfile.close();
+
+
+          int k=2;
+
+          P=new Process*[n];
+          thread threads[n];
+
+          for(i=0;i<n;i++) /*Creating thread of each process. 'n' threads for 'n' processes*/
+            threads[i] =  thread(create_process_and_socket,i);
+
+          for(i=0;i<n;i++)
+            threads[i].join();
+
+          srand((unsigned) time(0));
+					sleep(3);
+				//	std::cout << "Processes created here\n" << '\n';
+          initiator_p=new Process(n);
+          initiator_p->socket_create();
+					strcpy(initiator_p->color,"red");
+					initiator_p->C=0;
+					initiator_p->D=Ir;
+          initiator_p->parentNode=n;
+
+					DD=(int *)malloc(sizeof(int));
+					*DD=Ir;
+					process_init=n;
+
+					float ff=sleepTime(Wr);
+					sleep(Wr);
+
+          chooseRandomRedProcesses();
+					while(initiator_p->D!=0);
+					end_time=clock();
+					double total=(end_time-start_time)/double(CLOCKS_PER_SEC);
+					sleep(5);
+					std::cout << "\n Time taken by * Dijkstra Termination Detection * Algorithm is: " <<total<<"\n";
+
+					printPattern();
+}
+
+float sleepTime(float a)
+{
+  double reqSleepTime;
+  reqSleepTime = rand() / (double)(RAND_MAX);
+  reqSleepTime=-log(1- reqSleepTime) / a;
+  return reqSleepTime;
+}
+void chooseRandomRedProcesses()
+{
+	float t=sleepTime(Wr);
+	sleep(2*t);
+	std::vector<int> v=findRandomness(Ir,n);
+
+		localclock local_clock;
+		struct tm * time_information; /* Structure containing a calendar date and time broken down into its components*/
+		time_t system_time;/* time type variable, which stores the local_clock time from the tableValues*/
+		time_information; /*Converts to local time*/
+		char *stringTime;/*Convert tm structure to string*/
+
+		for(int i=0;i<Ir;i++)
+		{
+			system_time=local_clock.Timeread();
+			time ( &system_time );
+			time_information = localtime ( &system_time );
+			stringTime= asctime(time_information);
+			stringTime[19]='\0';
+			stringTime=&stringTime[11];
+
+			strcpy(P[v[i]]->color,"red");
+			P[v[i]]->parentNode=initiator_p->pid;
+			P[v[i]]->C=1;
+			P[v[i]]->D=0;
+			*number_of_messages+=1;
+			printf("Cell %d turns red at %s\n\n",v[i]+1,stringTime );
+		}
+	//	std::cout << "Random vector size\n"<<v.size() << '\n';
+		for(int i=0;i<v.size();i++)
+		{
+				int r=v[i];
+			//	std::cout << r << '\n';
+				int adj=adjacencyMatrix[r].size();
+				for(int j=1;j<adj;j++)
+				{
+					//printf("Cell %d is neighbour of Cell %d\n",adjacencyMatrix[r][j],r+1);
+					int in=adjacencyMatrix[r][j]-1;
+					sendRedMessage(r,in);
+				}
+		}
+		//printf("Ended here chooseRandomRedProcesses\n" );
+}
+
+void chooseRandomBlueProcesses()
+{
+	float t=sleepTime(Wb);
+	sleep(2*t);
+	std::vector<int> v=findRandomness(Ib,n);
+
+	/*for(int i=0;i<v.size();i++)
+		std::cout << v[i] << '\t';
+	cout<<endl; */
+
+		localclock local_clock;
+		struct tm * time_information; /* Structure containing a calendar date and time broken down into its components*/
+		time_t system_time;/* time type variable, which stores the local_clock time from the tableValues*/
+		time_information; /*Converts to local time*/
+		char *stringTime;/*Convert tm structure to string*/
+
+		for(int i=0;i<Ib;i++)
+		{
+			system_time=local_clock.Timeread();
+			time ( &system_time );
+			time_information = localtime ( &system_time );
+			stringTime= asctime(time_information);
+			stringTime[19]='\0';
+			stringTime=&stringTime[11];
+
+			if(P[v[i]]->D==0)
+			{
+				strcpy(P[v[i]]->color,"blue");
+				printf("Cell %d turns blue at %s\n\n",v[i]+1,stringTime );
+			}
+			else
+			{
+					if((v[i]+1)!=n)
+					{
+						v[i]=v[i]+1;
+						i--;
+					}
+			}
+		}
+	//	std::cout << "Random vector size\n"<<v.size() << '\n';
+		for(int i=0;i<v.size();i++)
+		{
+				int r=v[i];
+			//	std::cout << r << '\n';
+				int adj=adjacencyMatrix[r].size();
+				for(int j=1;j<adj;j++)
+				{
+					//printf("Cell %d is neighbour of Cell %d\n",adjacencyMatrix[r][j],r+1);
+					int in=adjacencyMatrix[r][j]-1;
+					sendBlueMessage(r,in);
+				}
+		}
+		//printf("Ended here chooseRandomRedProcesses\n" );
+}
+
+
+vector<int>findRandomness(int size_subset,int n_adj_size) //returns subset of indices of size size_subset range between 0 to n_adj_size
+{
+	//size_subset is no.of indices
+	//n_adj_size is no.of neighbours
+
+	int i=0,flag=1;
+	vector<int>v;
+	while(i<size_subset)
+	{
+		int index=rand()%n_adj_size;
+		if(index!=0){
+		if(i==0){
+				v.push_back(index);
+		}
+		else{
+				flag=0;
+				do{
+					flag=0;
+				//int index=rand()%n_adj_size;
+				if(find(v.begin(), v.end(), index) != v.end()&&index!=0)
+				{
+					flag=1;
+					index=rand()%n_adj_size;
+				}
+				else
+				{
+						v.push_back(index);
+						flag=0;
+				}
+				}while(flag);
+		}
+		i++;
+
+		}
+	}
+
+	return v;
+}
+
+void sendRedMessage(int s,int d)
+{
+
+  if(s!=d&&s<n+1&&d<n+1)
+    {
+      char message[MAX_BUFFER];
+      sprintf(message,"%s %d\n","red",s	);
+      if(P[s]->C>0)
+			{
+
+				P[s]->send(s,d,message);
+			}
+    }
+}
+
+void sendBlueMessage(int s,int d)
+{
+
+  if(s!=d&&s<n+1&&d<n+1)
+    {
+      char message[MAX_BUFFER];
+      sprintf(message,"%s %d\n","blue",s	);
+      P[s]->send(s,d,message);
+    }
+}
+char * timeTaken()
+{
+    localclock local_clock;
+    struct tm * time_information; /* Structure containing a calendar date and time broken down into its components*/
+    time_t system_time;/* time type variable, which stores the local_clock time from the tableValues*/
+    time_information; /*Converts to local time*/
+    char *stringTime;/*Convert tm structure to string*/
+    system_time=local_clock.Timeread();
+    time ( &system_time );
+    time_information = localtime ( &system_time );
+    stringTime= asctime(time_information);
+    stringTime[19]='\0';
+    stringTime=&stringTime[11];
+
+    return stringTime;
+
+}
+void redNeighbours(int s)
+{
+	int n_size=ceil(adjacencyMatrix[s].size()*p);
+	std::vector<int> v=findRandomness(n_size,adjacencyMatrix[s].size());
+	for(int i=0;i<v.size();i++)
+	{
+		float tt=sleepTime(Wr);
+		sleep(tt);
+		if(s<n+1&&adjacencyMatrix[s][v[i]]-1<n+1) sendRedMessage(s,adjacencyMatrix[s][v[i]]-1);
+	}
+
+}
+void blueNeighbours(int s)
+{
+	int n_size=ceil(adjacencyMatrix[s].size()*q);
+	std::vector<int> v=findRandomness(n_size,adjacencyMatrix[s].size());
+	for(int i=0;i<v.size();i++)
+	{
+		float tt=sleepTime(Wb);
+		sleep(tt);
+		if(s<n+1&&adjacencyMatrix[s][v[i]]-1<n+1)  sendBlueMessage(s,adjacencyMatrix[s][v[i]]-1);
+	}
+}
+
+
+void makeProcessD(int s)
+{
+	if(s!=process_init) P[s]->D+=1;
+}
+
+void decreaseInitiator()
+{
+	//printf("Came to decreaseInitiator function %d is D and *D=%d\tcount= %d\n",initiator_p->D,*DD,*number_of_messages );
+	if(initiator_p->D>0) initiator_p->D-=1;
+}
+bool checkTTD()
+{
+	if(initiator_p->D==0)
+	{
+		std::cout << "Terminated" << '\n';
+		return true;
+	}
+	return false;
+}
+bool chechParentNode(int id)
+{
+	if(P[id]->parentNode==id) return true;
+	return false;
+}
+
+void printPattern()
+{
+	printf("\npid\tcolor\tC\tD\tparentNode\n");
+	for(int i=0;i<n;i++)
+	{
+		printf("%d\t%s\t%d\t%d\t%d\n\n",P[i]->pid+1,P[i]->color,P[i]->C,P[i]->D,P[i]->parentNode+1);
+	}
+
+	printf("%d is number of messages sent to detect Termination\n\n",*number_of_messages );
+
+}

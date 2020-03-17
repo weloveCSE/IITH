@@ -1,0 +1,2 @@
+g++ -std=c++11 CS19MTECH11009_TD_1.cpp -lpthread
+./a.out >output.txt
